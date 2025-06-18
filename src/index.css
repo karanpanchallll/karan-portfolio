@@ -1,0 +1,86 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 11% 15%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 11% 19%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 11% 19%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 11% 15%;
+
+    --secondary: 210 11% 21%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 11% 21%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 210 11% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 11% 25%;
+    --input: 210 11% 25%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 11% 15%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 210 11% 15%;
+    --sidebar-accent: 210 11% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 11% 25%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-sm border border-white/10;
+  }
+  
+  .glow-on-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20;
+  }
+
+  .border-gradient {
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
