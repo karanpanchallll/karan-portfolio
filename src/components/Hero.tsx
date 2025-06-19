@@ -115,7 +115,7 @@ const Hero = () => {
             </Button>
             
             <a
-  href="/karan_resume_all.pdf"
+  href="/Karan_resume_all.pdf"
   download
   className="relative group rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-700 hover:via-purple-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 border-0 flex items-center h-[52px]"
 >
